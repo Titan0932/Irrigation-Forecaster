@@ -139,6 +139,7 @@ def get_et(eto,month,kc,stage_dur):       #When the crop is transplanted, the le
             et[month_item]+=eto[month_item] * (temp_days[month_item]/total_days)*kc[stage_item]
             month_item=next(months_iter)
 
+
     return et
     
 #----------------------------------------------------------------------------------------#
@@ -206,8 +207,12 @@ def get_in(et,pe):
     dail={}
 
     for key in et.keys():
-        mon[key]=round((et[key]* days[key] - pe[key]),3)
-        dail[key]=round((et[key] - pe[key] /30),3)
+        if et[key]!=0:
+            mon[key]=round((et[key]* days[key] - pe[key]),3)
+            dail[key]=round((et[key] - pe[key] /30),3)
+        else:
+            mon[key]=0
+            dail[key]=0
     return [mon,dail]
 
 #----------------------------------------------------------------------------------------#
