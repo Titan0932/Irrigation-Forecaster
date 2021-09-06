@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/styles/style.css" type='text/css'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+    <header class="l-header">
+        <nav class="nav">
+
+            <div class='nav-logo'>
+                <a href="/" class="nav-logo"><img src="../static/images/logo.png" alt="logo" border="0"/></a>
+            </div>
+            
+
+            <div class="nav-heading">
+               <h1 class='nav-title'> Sustainable Irrigation</h1> 
+               
+            </div>
+           
+        </nav>
+    </header>
+<main>
+
+
+
+
+
+    {% block content %}
+    
+    {% endblock %}
+
+
+</main>
+
+<footer class='footer'>
+    <p class='footer-title'> Anjish Pradhananga </p>
+    <a href="https://www.instagram.com/anjish_awesome/" class="footer-social-icon" target='_blank'><i class='bx bxl-instagram' ></i></a>
+    <a href="https://www.facebook.com/anjishrocks/" class="footer-social-icon" target='_blank'><i class='bx bxl-facebook-circle'></i></a>
+    <a href="tel:9861696089 " class="footer-social-icon" target='_blank'><i class='bx bxs-phone'></i></a>
+
+    <p class='footer-copyright'>&copy; 2021 All Rights Served</p>
+
+</footer>
+</body>
+</html>

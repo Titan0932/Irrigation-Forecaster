@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} RESULTS {% endblock %}
+
+{% block content %} 
+
+<section class='letsStart bd-grid'>
+
+    <div class='letsStart-container'>
+
+
+<table style='border: 3px solid rgb(108, 84, 73);; border-spacing: 2rem; margin-top: 1rem; column-gap: 2rem; overflow: scroll'>
+    <caption style="color:rgb(108, 84, 73) ;"> Irrigation per month (in mm)  </caption>
+    <thead>    
+    <tr>
+    {% for i in month.keys %}
+    
+        <th style="color: rgb(108, 84, 73);"> {{i}} </th>
+    {% endfor %}
+</tr>
+</thead>
+<tbody>
+    <tr>
+    {% for i,j in month.items %}
+      <td style="color: rgb(15, 67, 140);"> {{j}} </td>
+    {% endfor %}
+</tr>
+</tbody>
+
+</table>
+
+<table style='border: 3px solid rgb(108, 84, 73); border-spacing: 2rem; margin-top: 1rem; column-gap: 2rem; overflow: scroll; width: 10%;' >
+    <caption style="color:rgb(108, 84, 73) ;"> Irrigation per day per month (in mm)  </caption>
+    <thead>
+    <tr>
+        
+    {% for i in day.keys %}
+    
+        <th style="color: rgb(108, 84, 73);;"> {{i}} </th>
+    {% endfor %}
+</tr>
+</thead>
+<tbody>
+<tr>
+    {% for i,j in day.items %}
+      <td style="color: rgb(15, 67, 140);"> {{j}} </td>
+    {% endfor %}
+</tr>
+</tbody>
+</table>
+<p style="padding-top: 1rem;color:rgb(108, 84, 73)"><i><b> *Negative and Null Values indicate no requirements  </b></i>  </p>
+
+</div>
+</section>
+
+
+{% endblock %}

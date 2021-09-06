@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Home- Responsible Irrigation{% endblock %}
+
+{% block content %}
+<section class='letsStart bd-grid'>
+
+    <div class='letsStart-container'>
+
+        <h2 class="section-title"> Did you know?!!</h2>
+
+        <p>
+
+            The agricultural sector uses over 70 % of global freshwater withdrawals for irrigation. The projected increase in global mean 
+            temperature, population growth and changing precipitation patterns are expected to decrease natural water availability in already-water-scarce regions of the world.
+            Hence, it is essential that water is used efficiently and effectively to prevent the exacerbation of this <span style="color: red;">global looming threat.</span>
+        </p>
+        <p>
+            <br>
+          This Web App allows you to calculate your Irrigation Needs for various crops, through various stages of growth, and also by considering
+            your location: precipitation, mean temperature and so on.. <br> <br>
+       <p style="font-size: smaller;"> <i>   P.S: This is in development stage and so at this point of time gives you information for only 5 states in the US (The largest Agricultural producers:
+            California, Iowa,Texas, Nebraska , and Illanois. ) </i>  </p>
+
+        </p>
+        <button id='go-to-form'> <a href='form/'> Take Some Responsibility!!</a> </button>
+    </div>
+
+</section>
+{% endblock %}
